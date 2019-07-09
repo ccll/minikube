@@ -52,7 +52,7 @@ var dirs = [...]string{
 }
 
 var (
-	enableUpdateNotification = true
+	enableUpdateNotification = false
 )
 
 var viperWhiteList = []string{
