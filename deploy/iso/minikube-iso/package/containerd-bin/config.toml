@@ -29,7 +29,7 @@ oom_score = 0
     stream_server_address = ""
     stream_server_port = "10010"
     enable_selinux = false
-    sandbox_image = "k8s.gcr.io/pause:3.1"
+    sandbox_image = "gcr.azk8s.cn/google_containers/pause:3.1"
     stats_collect_period = 10
     systemd_cgroup = false
     enable_tls_streaming = false
@@ -52,7 +52,13 @@ oom_score = 0
     [plugins.cri.registry]
       [plugins.cri.registry.mirrors]
         [plugins.cri.registry.mirrors."docker.io"]
-          endpoint = ["https://registry-1.docker.io"]
+          endpoint = ["https://dockerhub.azk8s.cn"]
+        [plugins.cri.registry.mirrors."k8s.gcr.io"]
+          endpoint = ["https://gcr.azk8s.cn/google_containers"]
+        [plugins.cri.registry.mirrors."gcr.io"]
+          endpoint = ["https://gcr.azk8s.cn"]
+        [plugins.cri.registry.mirrors."quay.io"]
+          endpoint = ["https://quay.azk8s.cn"]
   [plugins.diff-service]
     default = ["walking"]
   [plugins.linux]
