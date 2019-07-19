@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: elasticsearch-logging
-        image: {{default "k8s.gcr.io" .ImageRepository}}/elasticsearch:v5.6.2
+        image: {{default "gcr.azk8s.cn/google_containers" .ImageRepository}}/elasticsearch:v5.6.2
         resources:
           limits:
             cpu: 500m

@@ -70,8 +70,8 @@ This error indicates that the host:port combination defined by HTTPS_PROXY or HT
 ```text
 Unable to pull images, which may be OK:
 
-failed to pull image "k8s.gcr.io/kube-apiserver:v1.13.3": output: Error response from daemon:
-Get https://k8s.gcr.io/v2/: net/http: request canceled while waiting for connection
+failed to pull image "gcr.azk8s.cn/google_containers/kube-apiserver:v1.13.3": output: Error response from daemon:
+Get https://gcr.azk8s.cn/google_containers/v2/: net/http: request canceled while waiting for connection
 (Client.Timeout exceeded while awaiting headers)
 ```
 
@@ -80,9 +80,9 @@ This error indicates that the container runtime running within the VM does not h
 ## x509: certificate signed by unknown authority
 
 ```text
-[ERROR ImagePull]: failed to pull image k8s.gcr.io/kube-apiserver:v1.13.3:
+[ERROR ImagePull]: failed to pull image gcr.azk8s.cn/google_containers/kube-apiserver:v1.13.3:
 output: Error response from daemon:
-Get https://k8s.gcr.io/v2/: x509: certificate signed by unknown authority
+Get https://gcr.azk8s.cn/google_containers/v2/: x509: certificate signed by unknown authority
 ```
 
 This is because minikube VM is stuck behind a proxy that rewrites HTTPS responses to contain its own TLS certificate. The [solution](https://github.com/kubernetes/minikube/issues/3613#issuecomment-461034222) is to install the proxy certificate into a location that is copied to the VM at startup, so that it can be validated.

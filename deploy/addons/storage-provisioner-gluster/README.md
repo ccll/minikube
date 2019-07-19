@@ -103,7 +103,7 @@ metadata:
   name: website-nginx
 spec:
   containers:
-  - image: gcr.io/google_containers/nginx-slim:0.8
+  - image: gcr.azk8s.cn/google_containers/nginx-slim:0.8
     name: nginx
     ports:
     - containerPort: 80

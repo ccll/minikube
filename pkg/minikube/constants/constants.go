@@ -243,11 +243,11 @@ func GetKubeadmCachedBinaries() []string {
 
 // GetKubeadmCachedImages gets the images to cache for kubeadm for a version
 func GetKubeadmCachedImages(imageRepository string, kubernetesVersionStr string) (string, []string) {
-	minikubeRepository := imageRepository
-	if imageRepository == "" {
-		imageRepository = "k8s.gcr.io"
-		minikubeRepository = "gcr.io/k8s-minikube"
-	}
+	// minikubeRepository := imageRepository
+	// if imageRepository == "" {
+	imageRepository = "gcr.azk8s.cn/google_containers"
+	minikubeRepository := "gcr.azk8s.cn/k8s-minikube"
+	// }
 	if !strings.HasSuffix(imageRepository, "/") {
 		imageRepository += "/"
 	}

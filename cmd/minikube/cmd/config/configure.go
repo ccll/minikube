@@ -52,7 +52,7 @@ var addonsConfigureCmd = &cobra.Command{
 			dockerServer := "changeme"
 			dockerUser := "changeme"
 			dockerPass := "changeme"
-			gcrURL := "https://gcr.io"
+			gcrURL := "https://gcr.azk8s.cn"
 
 			enableAWSECR := AskForYesNoConfirmation("\nDo you want to enable AWS Elastic Container Registry?", posResponses, negResponses)
 			if enableAWSECR {
@@ -67,10 +67,10 @@ var addonsConfigureCmd = &cobra.Command{
 			enableGCR := AskForYesNoConfirmation("\nDo you want to enable Google Container Registry?", posResponses, negResponses)
 			if enableGCR {
 				gcrPath := AskForStaticValue("-- Enter path to credentials (e.g. /home/user/.config/gcloud/application_default_credentials.json):")
-				gcrchangeURL := AskForYesNoConfirmation("-- Do you want to change the GCR URL (Default https://gcr.io)?", posResponses, negResponses)
+				gcrchangeURL := AskForYesNoConfirmation("-- Do you want to change the GCR URL (Default https://gcr.azk8s.cn)?", posResponses, negResponses)
 
 				if gcrchangeURL {
-					gcrURL = AskForStaticValue("-- Enter GCR URL (e.g. https://asia.gcr.io):")
+					gcrURL = AskForStaticValue("-- Enter GCR URL (e.g. https://asia.gcr.azk8s.cn):")
 				}
 
 				// Read file from disk

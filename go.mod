@@ -96,7 +96,7 @@ require (
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/cheggaaa/pb.v1 v1.0.6 // indirect
 	gopkg.in/gemnasium/logrus-airbrake-hook.v2 v2.1.2 // indirect
-	gopkg.in/inf.v0 v0.9.0 // indirect
+	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v1 v1.0.0-20140924161607-9f9df34309c0 // indirect
 	k8s.io/api v0.0.0-20180712090710-2d6f90ab1293
 	k8s.io/apimachinery v0.0.0-20180621070125-103fd098999d

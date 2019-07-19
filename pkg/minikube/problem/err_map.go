@@ -157,7 +157,7 @@ const proxyDoc = "https://github.com/kubernetes/minikube/blob/master/docs/http_p
 // netProblems are network related problems.
 var netProblems = map[string]match{
 	"GCR_UNAVAILABLE": {
-		Regexp: re(`gcr.io.*443: connect: invalid argument`),
+		Regexp: re(`gcr.azk8s.cn.*443: connect: invalid argument`),
 		Advice: "minikube is unable to access the Google Container Registry. You may need to configure it to use a HTTP proxy.",
 		URL:    proxyDoc,
 		Issues: []int{3860},
@@ -187,7 +187,7 @@ var netProblems = map[string]match{
 		Issues: []int{3922},
 	},
 	"PULL_TIMEOUT_EXCEEDED": {
-		Regexp: re(`failed to pull image k8s.gcr.io.*Client.Timeout exceeded while awaiting headers`),
+		Regexp: re(`failed to pull image gcr.azk8s.cn/google_containers.*Client.Timeout exceeded while awaiting headers`),
 		Advice: "A firewall is blocking Docker within the minikube VM from reaching the internet. You may need to configure it to use a proxy.",
 		URL:    proxyDoc,
 		Issues: []int{3898},
